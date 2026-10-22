@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     awscli \
     && rm -rf /var/lib/apt/lists/*
 
-COPY slide.sh /opt/ml/processing/input/codet.sh
+COPY codet.sh /opt/ml/processing/input/codet.sh
 RUN chmod +x /opt/ml/processing/input/codet.sh
 
 ENTRYPOINT ["/bin/bash", "/opt/ml/processing/input/codet.sh"]
